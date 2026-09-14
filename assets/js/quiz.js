@@ -97,6 +97,7 @@ const productsData = {
 };
 
 // خريطة تربط اسم المنتج في الكويز بالـ id بتاعه في data.js
+
 const quizToProductId = {
     "Hydra Glow": "hydra-glow",
     "Revive Eye Cream": "revive-eye-cream",
@@ -107,28 +108,41 @@ const quizToProductId = {
 };
 
 let currentQuestion = 0;
+
 let answers = [];
 
 const welcomeScreen = document.getElementById("welcome-screen");
+
 const quizScreen = document.getElementById("quiz-screen");
+
 const resultScreen = document.getElementById("result-screen");
 
 function showScreen(screen) {
+
     [welcomeScreen, quizScreen, resultScreen].forEach(item => {
+
         item.classList.add("hidden");
+
     });
 
     screen.classList.remove("hidden");
+
 }
 
 function startQuiz() {
+
     currentQuestion = 0;
+
     answers = [];
+
     showScreen(quizScreen);
+
     loadQuestion();
+
 }
 
 function loadQuestion() {
+
     const question = questions[currentQuestion];
 
     document.getElementById("question-title").textContent = question.title;
@@ -139,20 +153,25 @@ function loadQuestion() {
     const progress = ((currentQuestion) / questions.length) * 100;
 
     document.getElementById("progress-bar").style.width = `${progress}%`;
+
     document.getElementById("progress-percentage").textContent =
         `${Math.round(progress)}%`;
 
     const questionArea = document.getElementById("question-area");
 
     questionArea.style.animation = "none";
+
     void questionArea.offsetWidth;
+
     questionArea.style.animation =
         "questionEnter .6s cubic-bezier(.16,1,.3,1)";
 
     const container = document.getElementById("options-container");
+
     container.innerHTML = "";
 
     question.options.forEach(([text, product], index) => {
+
         const selected = answers[currentQuestion] === product;
 
         const box = document.createElement("div");
@@ -172,6 +191,7 @@ function loadQuestion() {
         box.onclick = () => selectOption(product, box);
 
         container.appendChild(box);
+
     });
 
     const prev = document.getElementById("prev-btn");
@@ -184,14 +204,18 @@ function loadQuestion() {
 
     document.getElementById("next-btn").disabled =
         !answers[currentQuestion];
+
 }
 
 function selectOption(product, element) {
+
     document.querySelectorAll(".option-box").forEach(box => {
+
         box.classList.remove("selected");
 
         box.querySelector(".option-icon").className =
             "option-icon fa-regular fa-circle-check";
+
     });
 
     element.classList.add("selected");
@@ -202,29 +226,45 @@ function selectOption(product, element) {
     answers[currentQuestion] = product;
 
     document.getElementById("next-btn").disabled = false;
+
 }
 
 function nextQuestion() {
+
     if (currentQuestion < questions.length - 1) {
+
         currentQuestion++;
+
         loadQuestion();
+
     } else {
+
         showResult();
+
     }
+
 }
 
 function prevQuestion() {
+
     if (currentQuestion > 0) {
+
         currentQuestion--;
+
         loadQuestion();
+
     }
+
 }
 
 function showResult() {
+
     const counts = {};
 
     answers.forEach(product => {
+
         counts[product] = (counts[product] || 0) + 1;
+
     });
 
     const bestMatch = Object.keys(counts).reduce((a, b) =>
@@ -235,7 +275,6 @@ function showResult() {
 
     document.getElementById("product-result-content").innerHTML = `
         <div class="product-card">
-
             <div class="product-image-wrapper">
                 <img
                     src="${product.image}"
@@ -243,32 +282,25 @@ function showResult() {
                     class="product-image"
                 >
             </div>
-
             <div class="product-info">
-
                 <div class="product-top">
                     <span class="product-type">
                         ${product.type}
                     </span>
-
                     <span class="product-price">
                         ${product.price}
                     </span>
                 </div>
-
                 <h3 class="product-name">
                     ${bestMatch}
                 </h3>
-
                 <p class="product-description">
                     ${product.description}
                 </p>
-
                 <div class="ingredients">
                     <strong>Active Ingredients:</strong>
                     ${product.ingredients}
                 </div>
-
                 <button
                     class="buy-button"
                     id="buy-btn"
@@ -277,19 +309,22 @@ function showResult() {
                     <i class="fa-solid fa-bag-shopping"></i>
                     Buy Now — ${product.price}
                 </button>
-
             </div>
         </div>
     `;
 
     showScreen(resultScreen);
+
 }
 
 function buyProduct(product) {
+
     const productId = quizToProductId[product];
 
     if (productId && typeof addToCart === "function") {
+
         addToCart(productId);
+
     }
 
     const btn = document.getElementById("buy-btn");
@@ -302,11 +337,17 @@ function buyProduct(product) {
     `;
 
     btn.disabled = true;
+
     btn.classList.add("added");
+
 }
 
 function restartQuiz() {
+
     currentQuestion = 0;
+
     answers = [];
+
     showScreen(welcomeScreen);
+
 }
