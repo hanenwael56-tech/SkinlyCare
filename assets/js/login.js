@@ -37,7 +37,7 @@ if (password === "")
         showToast("Login successful!");
         // Go to home page after a short delay
         setTimeout(function () {
-            window.location.href = "index.html";//هنا نحط مكان الصفحة اللي هيروح عليها لما يعمل log in
+            window.location.href = "home.html";//هنا نحط مكان الصفحة اللي هيروح عليها لما يعمل log in
         }, 1500);
 
     } else {

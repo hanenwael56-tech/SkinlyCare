@@ -62,6 +62,22 @@
   );
 }
 
+body.dark-mode .product-thumbs-viewport::before {
+  background: linear-gradient(
+    to right,
+    #323C33 0%,
+    rgba(50, 60, 51, 0) 100%
+  );
+}
+
+body.dark-mode .product-thumbs-viewport::after {
+  background: linear-gradient(
+    to left,
+    #323C33 0%,
+    rgba(50, 60, 51, 0) 100%
+  );
+}
+
 .product-thumbs {
   display: flex;
   gap: 22px;

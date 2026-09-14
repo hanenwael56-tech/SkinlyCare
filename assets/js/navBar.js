@@ -1,3 +1,11 @@
+// =========================
+// APPLY SAVED THEME (قبل أي حاجة تانية عشان مايحصلش فلاش)
+// =========================
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+}
+
+
 fetch("./navBar.html")
     .then(response => response.text())
     .then(data => {
@@ -37,12 +45,25 @@ fetch("./navBar.html")
 
         if (themeBtn && themeIcon) {
 
+            // ظبطي شكل الأيقونة صح لو الدارك مود متفعل من الأول
+            if (document.body.classList.contains("dark-mode")) {
+                themeIcon.classList.remove("fa-moon");
+                themeIcon.classList.add("fa-sun");
+            }
+
             themeBtn.addEventListener("click", () => {
 
                 document.body.classList.toggle("dark-mode");
 
                 themeIcon.classList.toggle("fa-moon");
                 themeIcon.classList.toggle("fa-sun");
+
+                // تخزين الاختيار عشان يفضل ثابت
+                if (document.body.classList.contains("dark-mode")) {
+                    localStorage.setItem("theme", "dark");
+                } else {
+                    localStorage.setItem("theme", "light");
+                }
 
             });
 

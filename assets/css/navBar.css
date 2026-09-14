@@ -89,7 +89,7 @@
     color: var(--textColor) !important;
 
     font-family: var(--baisFont) !important;
-    font-size: 30px !important;
+    font-size: 22   px !important;
     font-weight: 500 !important;
 
     white-space: nowrap;
@@ -478,7 +478,7 @@ body.dark-mode {
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
-    color: var(--mainColor);
+    color: #FFF8F1;
 }
 
 body.dark-mode .navbar {
@@ -488,7 +488,10 @@ body.dark-mode .navbar {
 }
 
 body.dark-mode .navbar .nav-logo a,
-body.dark-mode .navbar .nav-links li a {
+body.dark-mode .navbar .nav-links li a,
+body.dark-mode .card-cart-btn>i, 
+body.dark-mode .card-wishlist-btn>i
+{
     color: #FFFFFF !important;
 }
 
@@ -497,6 +500,63 @@ body.dark-mode .navbar .nav-links li a:hover {
 
     text-shadow: 2px 2px 4px var(--mainColor);
 }
+
+body.dark-mode .buttons a:last-child button{
+    color: var(--mainColor);
+}
+
+body.dark-mode .section1 .card,
+body.dark-mode .section4 .sec4cards,
+body.dark-mode .home-blog-content,
+body.dark-mode .blog-card ,
+body.dark-mode .screen-content
+{
+    background-color: #1B1E1C !important;
+}
+
+body.dark-mode .faq .faq-question>h3
+{
+    color: #1B1E1C !important;
+}
+
+body.dark-mode .home-products-section,
+body.dark-mode .sec4cards > div,
+body.dark-mode .hero ,
+body.dark-mode .background-decoration,
+body.dark-mode .product-result-content
+{ 
+     background-color: #323C33 !important;
+}
+
+
+
+
+body.dark-mode .product-card {
+    background: #323C33 !important;
+}
+
+body.dark-mode .product-card .product-info {
+    background: #323C33 !important;
+}
+
+body.dark-mode .product-card .product-name {
+    color: #FFF8F1 !important;
+}
+
+body.dark-mode .product-card .product-description {
+    color: #d5d5d5 !important;
+}
+
+body.dark-mode .product-card .ingredients {
+    color: #d5d5d5 !important;
+}
+
+body.dark-mode .product-card span,
+body.dark-mode .product-card strong{
+    color: #c5af72;
+}
+
+
 
 
 /* =========================
