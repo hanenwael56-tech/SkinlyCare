@@ -52,7 +52,7 @@ const productsData = {
         price: "$38.00",
         description: "A rich yet lightweight daily moisturizer that deeply hydrates, strengthens the skin barrier, and leaves skin soft, smooth, and naturally radiant.",
         ingredients: "Hyaluronic Acid, Ceramides, Shea Butter, Vitamin E",
-        image: "https://framerusercontent.com/images/aSDibWPrvkBeelboEnuZxzZRQ.png?width=600&height=439"
+        image: "./assets/images/Hydra Glow/main.jpg"
     },
 
     "Revive Eye Cream": {
@@ -60,7 +60,7 @@ const productsData = {
         price: "$36.00",
         description: "A lightweight eye cream that hydrates the delicate eye area while reducing the appearance of puffiness, dark circles, and fine lines.",
         ingredients: "Caffeine, Hyaluronic Acid, Peptides, Vitamin E",
-        image: "https://framerusercontent.com/images/r0YR0N2J4E3iRIknWRRnIynD7Q.png?scale-down-to=1024&width=1100&height=1300"
+        image: "./assets/images/Revive Eye Cream/main.jpg"
     },
 
     "Gentle Foaming": {
@@ -68,7 +68,7 @@ const productsData = {
         price: "$24.00",
         description: "A gentle foaming cleanser that effectively removes dirt, excess oil, and makeup while keeping skin hydrated and refreshed.",
         ingredients: "Amino Acids, Aloe Vera, Glycerin, Green Tea Extract",
-        image: "https://framerusercontent.com/images/RGavrHi29XbPi6XBca7Op8cylHg.png?scale-down-to=512&width=1490&height=1380"
+        image: "./assets/images/Gentle Foaming/main.jpg"
     },
 
     "Overnight Repair": {
@@ -76,7 +76,7 @@ const productsData = {
         price: "$46.00",
         description: "A rich overnight cream that deeply nourishes, repairs the skin barrier, and helps you wake up to smoother, healthier-looking skin.",
         ingredients: "Ceramides, Peptide Complex, Squalane, Vitamin E",
-        image: "https://framerusercontent.com/images/xx19K3YfsnDbombxGHJm6CZH88.png?width=640&height=850"
+        image: "./assets/images/Overnight Repair/main.jpg"
     },
 
     "Purifying Clay": {
@@ -84,7 +84,7 @@ const productsData = {
         price: "$32.00",
         description: "A detoxifying clay mask that removes impurities, absorbs excess oil, and leaves skin feeling fresh, smooth, and refined.",
         ingredients: "Kaolin Clay, Bentonite Clay, Green Tea, Aloe Vera",
-        image: "https://framerusercontent.com/images/j1aQ22jXGtkDF9TO3iPjIYEpWtc.png?width=640&height=960"
+        image: "./assets/images/Purifying Clay/main.jpg"
     },
 
     "Vit C Brightening": {
@@ -92,7 +92,7 @@ const productsData = {
         price: "$42.00",
         description: "A powerful antioxidant serum that visibly brightens skin, reduces dark spots, and promotes a smooth, radiant complexion.",
         ingredients: "Vitamin C, Ferulic Acid, Vitamin E, Hyaluronic Acid",
-        image: "https://framerusercontent.com/images/npFsLQPkNTfpaXTXEbCoM4tuU0w.png?width=640&height=794"
+        image: "./assets/images/Vit C Brightening/main.jpg"
     }
 };
 
