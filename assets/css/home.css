@@ -987,10 +987,9 @@ body {
 
     .sec1frame1 {
         width: 50vw;
-        height: 15vh;
-        top: -20px;
+        height: 80px;
+        top: -25px;
         left:20px;
-        text-align: start;
 
     }
 
@@ -1000,17 +999,19 @@ body {
 
     .sec1frame1 p{
         font-size: 4vw;
+        
+
     }
 
     .sec1frame2 {
         bottom: 12px;
         right: 12px;
         width: 60vw;
-        height: 10vh;
+        height: 50px;
     }
 
     .sec1frame2 p{
-        font-size: 3.2vw;
+        font-size: 3.4vw;
     }
 
 
@@ -1040,8 +1041,8 @@ body {
     }
 
     /* تعديل مواقع الصور في الموبايل لكي لا تغطي على النصوص */
-    .images img:nth-child(1) { top: -40px; left: 0px; width: 85px; height: 80px; }
-    .images img:nth-child(2) { top: -10px; left: 27px; width: 80px; height: 75px; }
+    .images img:nth-child(1) { top: -35px; left: 20px; width: 85px; height: 80px; }
+    .images img:nth-child(2) { top: -5px; left: 45px; width: 80px; height: 75px; }
 
     .images img:nth-child(3) { top: 250px; right: 30px; width: 85px; height: 80px; }
     .images img:nth-child(4) { top: 290px; right: 15px; width: 80px; height: 75px; }
